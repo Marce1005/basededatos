@@ -1,6 +1,6 @@
-CREATE DATABASE clientes_y_pedidos;
+CREATE DATABASE clientes_y_pedidos3;
 GO
-USE clientes_y_pedidos; 
+USE clientes_y_pedidos3; 
 
 
 CREATE TABLE Clientes(

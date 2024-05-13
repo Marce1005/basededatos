@@ -90,4 +90,7 @@ where ClienteID IN (select ClienteID from pedidos where producto = 'Sofa');
 
 -- Renombrar el nombre de un campo (sólo SQL SERVER)
 EXEC sp_rename '<nombre_tabla>.<nombre_actual_campo>',  '<nombre_nuevo_campo>', 'COLUMN';  --Formato del comando 
-EXEC sp_rename 'pedidos.un_nombre_incorrecto',  'producto', 'COLUMN';                      --Un ejemplo real del comando
+EXEC sp_rename 'pedidos.un_nombre_incorrecto',  'producto', 'COLUMN';                      
+--Un ejemplo real del comando
+
+--MERCE VAMONOS A BUSCAR DINERO, Q ME DICES? JJJJ

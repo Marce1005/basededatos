@@ -33,7 +33,7 @@ INSERT INTO Pedidos VALUES(237, 4, 92, 79.90, 'Colchon')
 select * from Clientes;
 select * from Pedidos;
 
---1. Listar los clientes que tienen algun pedido => Añadir campo "Contacto" a esta consulta
+--1. Listar los clientes que tienen algun pedido => AÃ±adir campo "Contacto" a esta consulta
 select * from clientes;
 
 SELECT NombreCliente AS 'NombreCliente - Lista de los clientes que tienen algun pedido', Contacto
@@ -55,20 +55,20 @@ WHERE ClienteID NOT IN (SELECT ClienteID FROM Pedidos);
 SELECT 'Sofie Mariona' AS 'Cliente', PedidoID, producto , precio
 FROM pedidos
 WHERE CLienteID IN (SELECT CLienteID FROM Clientes WHERE NombreCliente = 'Sofie Mariona')
---4. Listar los pedidos de Sofie Mariona, mayores de 50 €
+--4. Listar los pedidos de Sofie Mariona, mayores de 50 â‚¬
 
-SELECT 'Pedidos mayores de 50€', PedidoID, producto, precio
+SELECT 'Pedidos mayores de 50â‚¬', PedidoID, producto, precio
 FROM pedidos
 WHERE CLienteID IN (SELECT CLienteID FROM Clientes WHERE NombreCliente = 'Sofie Mariona') AND precio > 50
 
 
 
---5. Listar los clientes que han hecho pedidos > 50 €
+--5. Listar los clientes que han hecho pedidos > 50 â‚¬
 SELECT NombreCliente 
 FROM Clientes
 WHERE ClienteID IN (SELECT ClienteID FROM pedidos WHERE precio > 70)
 
---5(b). Listar los pedidos > 50 €... ¿hace falta subconsulta con SELECT? ¿Por qué?
+--5(b). Listar los pedidos > 50 â‚¬... Â¿hace falta subconsulta con SELECT? Â¿Por quÃ©?
 
 sel
 
@@ -88,6 +88,8 @@ where ClienteID IN (select ClienteID from pedidos where producto = 'Sofa');
 
 
 
--- Renombrar el nombre de un campo (sólo SQL SERVER)
+-- Renombrar el nombre de un campo (sÃ³lo SQL SERVER)
 EXEC sp_rename '<nombre_tabla>.<nombre_actual_campo>',  '<nombre_nuevo_campo>', 'COLUMN';  --Formato del comando 
 EXEC sp_rename 'pedidos.un_nombre_incorrecto',  'producto', 'COLUMN';                      --Un ejemplo real del comando
+
+CAMBIO ADICIONAL DESDE LA WED DE GITHUB A LA RAMA CARMEN EN EL REPO DE MARCELA
